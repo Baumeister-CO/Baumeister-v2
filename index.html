@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website project template</title>
+    <title>Baumeister</title>
     <link rel="stylesheet" href="dist/output.css" />
   </head>
   <script>
     const loadComponents = (id, url) => {
-      fetch(url)
+      return fetch(url)
         .then((response) => response.text())
         .then((html) => {
           document.getElementById(id).innerHTML = html;
@@ -17,15 +17,17 @@
 
     window.onload = () => {
       loadComponents("header", "src/sections/header.html");
-      loadComponents("hero", "src/sections/hero.html");
+      loadComponents("hero", "src/sections/hero.html")
+        .then(() => initialiseMenu());
       loadComponents("contact", "src/sections/contact.html");
       loadComponents("footer", "src/sections/footer.html");
     };
   </script>
-  <body class="bg-blue-500">
+  <body>
     <div id="header"></div>
     <div id="hero"></div>
     <div id="contact"></div>
     <div id="footer"></div>
+    <script src="/src/scripts/menu.js"></script>
   </body>
 </html>
