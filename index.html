@@ -8,7 +8,7 @@
   </head>
   <script>
     const loadComponents = (id, url) => {
-      fetch(url)
+      return fetch(url)
         .then((response) => response.text())
         .then((html) => {
           document.getElementById(id).innerHTML = html;
@@ -17,7 +17,8 @@
 
     window.onload = () => {
       loadComponents("header", "src/sections/header.html");
-      loadComponents("hero", "src/sections/hero.html");
+      loadComponents("hero", "src/sections/hero.html")
+        .then(() => initialiseMenu());
       loadComponents("contact", "src/sections/contact.html");
       loadComponents("footer", "src/sections/footer.html");
     };
@@ -27,5 +28,6 @@
     <div id="hero"></div>
     <div id="contact"></div>
     <div id="footer"></div>
+    <script src="/src/scripts/menu.js"></script>
   </body>
 </html>
