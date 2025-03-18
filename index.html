@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website project template</title>
+    <title>Baumeister</title>
     <link rel="stylesheet" href="dist/output.css" />
   </head>
   <script>
     const loadComponents = (id, url) => {
-      fetch(url)
+      return fetch(url)
         .then((response) => response.text())
         .then((html) => {
           document.getElementById(id).innerHTML = html;
@@ -29,5 +29,6 @@
     <div id="about"></div>
     <div id="contact"></div>
     <div id="footer"></div>
+    <script src="/src/scripts/menu.js"></script>
   </body>
 </html>
