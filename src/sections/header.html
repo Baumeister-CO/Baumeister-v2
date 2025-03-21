@@ -23,13 +23,38 @@
             <line x1="10" y1="6" x2="26" y2="6" stroke="#EFECEA" stroke-width="2"/>
             <line x1="10" y1="11" x2="26" y2="11" stroke="#EFECEA" stroke-width="2"/>
             <line x1="10" y1="16" x2="26" y2="16" stroke="#EFECEA" stroke-width="2"/>
-            </svg>
-            
-        <svg id="menu-close" class="w-full h-full hidden relative -top-1 fill-current" width="64" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.80534 11.4513L0 27.722L14.0904 42.7824L51.342 45.4718L63.5391 27.5875L45.6178 8L1.80534 11.4513Z"/>
-            <path d="M34.608 36L29.28 28.512L28.668 27.936L21.936 18.9H25.86L30.72 25.56L31.332 26.064L38.532 36H34.608ZM21.612 36L28.668 26.496L30.504 28.872L25.428 36H21.612ZM31.584 27.9L29.712 25.596L34.428 18.9H38.208L31.584 27.9Z" fill="white"/>
-            </svg>
-            
+        </svg>
+    </div>
+    <!-- mobile -->
+    <div id="mobile-menu" class="fixed top-0 h-full w-full transform translate-x-full transition-transform duration-400 ease-in-out bg-[#EFECEA] z-40">
+        <div>
+            <div class="flex justify-between p-6">
+                <div class="flex flex-col leading-tight text-lg lg:text-2xl">
+                    <span>DE</span>
+                    <span>EN</span>
+                </div>
+                <div class="flex text-3xl lg:text-5xl font-semibold lg:mt-3 relative">
+                    <img src="/public/images/white-bg.svg" alt="" class="-z-30 w-48.5 h-12.5">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <a href="/">Baumeister</a>
+                    </div>
+                </div>
+                <div class="cursor-pointer h-12 w-16 lg:hidden">
+                    <svg id="menu-close" class="w-full h-full relative -top-1 fill-current" width="64" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.80534 11.4513L0 27.722L14.0904 42.7824L51.342 45.4718L63.5391 27.5875L45.6178 8L1.80534 11.4513Z"/>
+                        <path d="M34.608 36L29.28 28.512L28.668 27.936L21.936 18.9H25.86L30.72 25.56L31.332 26.064L38.532 36H34.608ZM21.612 36L28.668 26.496L30.504 28.872L25.428 36H21.612ZM31.584 27.9L29.712 25.596L34.428 18.9H38.208L31.584 27.9Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <img src="/public/images/hero.svg" class="absolute h-full w-full lg:hidden top-56 -z-10" alt="">
+
+        <ul class="font-semibold flex flex-col gap-10 px-6 text-darkgreen text-center text-2xl mt-44 sm:mt-32">
+            <li>About</li>
+            <li>Services</li>
+            <li>References</li>
+            <li>Contact</li>
+        </ul>
     </div>
 </header>
 <script src="/src/scripts/menu.js"></script>
