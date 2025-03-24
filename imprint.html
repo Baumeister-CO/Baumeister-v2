@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baumeister</title>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script>
+    const loadComponents = (id, url) => {
+      return fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        });
+    };
+
+    window.onload = () => {
+      loadComponents("header", "src/sections/header.html");
+      loadComponents("hero", "src/sections/hero.html").then(() =>
+        initialiseMenu()
+      );
+      loadComponents("about", "src/sections/about.html");
+      loadComponents("contact", "src/sections/contact.html");
+      loadComponents("footer", "src/sections/footer.html");
+    };
+  </script>
+  <body>
+    <div class="text-sm text-[#00672E]" id="header"></div>
+    <div>
+      <main class="mt-24 px-4.5 text-2xl text-[#00672E]">
+        <section class="space-y-8">
+          <div>
+            <h1 class="font-bold">IMPRINT</h1>
+          </div>
+          <div>
+            <h2 class="font-bold">Agentur Baumeister</h2>
+            <p>Katrein Baumeister</p>
+            <p>Böckhstraße 13</p>
+            <p>10967 Berlin</p>
+          </div>
+          <div>
+            <p>+49 (0)30 - 490 827 87</p>
+            <p>hallo@agentur-baumeister.com</p>
+          </div>
+          <div>
+            <h2 class="font-bold">UST-IDNR.</h2>
+            <p>DE 274 486 923</p>
+          </div>
+          <div>
+            <h2 class="font-bold">REGISTERED OFFICE</h2>
+            <p>Berlin, Germany</p>
+          </div>
+        </section>
+        <section class="mt-24 space-y-8">
+          <h1 class="font-bold">DISCLAIMER</h1>
+          <p>
+            Despite all due care, no liability can be accepted for the accuracy,
+            completeness and up-to-dateness of the information provided. The
+            same applies to third-party websites to which
+            www.agentur-baumeister.com refers by means of hyperlinks. Katrein
+            Baumeister, Agentur Baumeister accepts no liability for the content
+            of these websites.
+          </p>
+        </section>
+      </main>
+    </div>
+    <div class="text-[#00672E]" id="footer"></div>
+    <script src="/src/scripts/menu.js"></script>
+  </body>
+</html>
