@@ -27,33 +27,31 @@
     </div>
     <!-- mobile -->
     <div id="mobile-menu" class="fixed top-0 right-0 left-0 h-full w-full transform translate-x-full lg:hidden transition-transform duration-400 ease-in-out bg-[#EFECEA] z-40">
-        <div class="pt-4.5">
-            <div class="flex justify-between p-6">
-                <div class="flex flex-col leading-tight text-lg lg:text-2xl">
-                    <span>DE</span>
-                    <span>EN</span>
-                </div>
-                <div class="flex text-3xl lg:text-5xl font-semibold lg:mt-3 relative">
-                    <!-- <img src="/public/images/white-bg.svg" alt="" class="-z-30 w-48.5 h-12.5"> -->
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <a href="/">Baumeister</a>
-                    </div>
-                </div>
-                <div class="cursor-pointer h-12 w-16 lg:hidden">
-                    <svg id="menu-close" class="w-full h-full relative -top-1 fill-current" width="64" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.80534 11.4513L0 27.722L14.0904 42.7824L51.342 45.4718L63.5391 27.5875L45.6178 8L1.80534 11.4513Z"/>
-                        <path d="M34.608 36L29.28 28.512L28.668 27.936L21.936 18.9H25.86L30.72 25.56L31.332 26.064L38.532 36H34.608ZM21.612 36L28.668 26.496L30.504 28.872L25.428 36H21.612ZM31.584 27.9L29.712 25.596L34.428 18.9H38.208L31.584 27.9Z" fill="white"/>
-                    </svg>
-                </div>
-            </div>
-            <ul class="font-semibold flex flex-col gap-10 px-6 text-darkgreen text-center text-2xl mt-28 md:mt-20 md:-translate-y-20">
-                <li>About</li>
-                <li>Services</li>
-                <li>References</li>
-                <li>Contact</li>
-            </ul>
-            <img src="/public/images/hero.svg" class="absolute lg:hidden top-56 -z-40 h-full w-full md:translate-y-10" alt="">
+      <div class="flex justify-between py-4.5 md:py-7 px-4 md:px-8.5 pt-12 md:pt-7 lg:pt-4 items-center">
+          <div class="flex flex-col leading-tight text-lg lg:text-2xl">
+              <span>DE</span>
+              <span>EN</span>
+          </div>
+          <div class="flex text-3xl lg:text-5xl font-semibold lg:mt-3 relative">
+              <!-- <img src="/public/images/white-bg.svg" alt="" class="-z-30 w-48.5 h-12.5"> -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                  <a href="/">Baumeister</a>
+              </div>
+          </div>
+          <div class="cursor-pointer h-12 w-16 lg:hidden">
+            <svg id="menu-close" class="w-full h-full relative -top-1 fill-current" width="64" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.80534 11.4513L0 27.722L14.0904 42.7824L51.342 45.4718L63.5391 27.5875L45.6178 8L1.80534 11.4513Z"/>
+                <path d="M34.608 36L29.28 28.512L28.668 27.936L21.936 18.9H25.86L30.72 25.56L31.332 26.064L38.532 36H34.608ZM21.612 36L28.668 26.496L30.504 28.872L25.428 36H21.612ZM31.584 27.9L29.712 25.596L34.428 18.9H38.208L31.584 27.9Z" fill="white"/>
+            </svg>
         </div>
+      </div>
+      <ul class="font-semibold flex flex-col gap-10 px-6 text-darkgreen text-center text-medium mt-22.5 md:mt-20 md:-translate-y-20">
+          <li>About</li>
+          <li>Services</li>
+          <li>References</li>
+          <li>Contact</li>
+      </ul>
+      <img src="/public/images/hero.svg" class="absolute lg:hidden bottom-0 -z-40 w-full md:translate-y-10" alt="">
     </div>
 </header>
 <script src="/src/scripts/menu.js"></script>
