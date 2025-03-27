@@ -22,15 +22,21 @@
       loadComponents("header", "src/sections/header.html");
       loadComponents("hero", "src/sections/hero.html")
         .then(() => initialiseMenu());
+      loadComponents("services", "src/sections/services.html")
+      loadComponents("contact", "src/sections/contact.html");
       loadComponents("about", "src/sections/about.html");
       loadComponents("references", "src/sections/references.html");
       loadComponents("footer", "src/sections/footer.html");
     };
   </script>
-  <body>
+  <body class="relative">
     <div id="header"></div>
     <div id="hero"></div>
     <div id="about"></div>
+    <div class=" sticky top-0 flex justify-center items-center">
+      <img class="w-36.5 md:w-49 lg:w-52" src="/public/images/sect-1-img.png">
+    </div>
+    <div id="services"></div>
     <div id="references"></div>
     <div id="footer"></div>
     <script src="/src/scripts/menu.js"></script>
