@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baumeister | Privacy Policy</title>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" >
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+    <script>
+        
+        const loadComponents = (id, url) => {
+            return fetch(url)
+                .then((response) => response.text())
+                .then((html) => {
+                    document.getElementById(id).innerHTML = html;
+                })
+        };
+
+        window.onload = () => {
+            loadComponents("footer", "src/sections/footer.html");
+            loadComponents("privacy-main", "src/sections/privacy-main.html");
+            loadComponents("header", "src/sections/header.html");
+        };
+    </script>
+</head>
+<body class="text-green relative bg-background">
+    <div id="header" class="sticky top-0 z-30"></div>
+    <div id="privacy-main"></div>
+    <div id="footer"></div>
+</body>
+</html>
